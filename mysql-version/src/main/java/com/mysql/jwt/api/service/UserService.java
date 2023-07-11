@@ -50,7 +50,7 @@ public class UserService {
      * @param loginUserReq        사용자가 입력한 email과 password를 담은 객체
      * @param httpServletRequest
      * @param httpServletResponse
-     * @return 성공 시 발급된 access token을  담은 LoginUserData 타입의 객체를 반환합니다.
+     * @return 성공 시 발급된 access token을  담은 LoginUserData 타입의 객체를 반환합니다
      */
     @Transactional
     public LoginUserData loginUser(LoginUserReq loginUserReq, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
@@ -90,7 +90,7 @@ public class UserService {
      * access token을 발급합니다.
      *
      * @param userId access token을 생성할 user id
-     * @return 성공 시 발급된 access token을 AuthToken 타입의 객체로 반환합니다.
+     * @return 성공 시 발급된 access token을 AuthToken 타입의 객체로 반환합니다
      */
     public AuthToken makeAccessToken(Long userId) {
 
@@ -106,7 +106,7 @@ public class UserService {
     /**
      * refresh token을 발급합니다.
      *
-     * @return 성공 시 생성한 refresh token을 AuthToken 타입의 객체로 반환합니다.
+     * @return 성공 시 생성한 refresh token을 AuthToken 타입의 객체로 반환합니다
      */
     public AuthToken makeRefreshToken() {
 
@@ -132,7 +132,7 @@ public class UserService {
      *
      * @param httpServletRequest
      * @param httpServletResponse
-     * @return 성공 시 재발급한 access token을 담은 ReissuedAccessTokenData 타입의 객체를 반환합니다.
+     * @return 성공 시 재발급한 access token을 담은 ReissuedAccessTokenData 타입의 객체를 반환합니다
      */
     @Transactional
     public ReissuedAccessTokenData reissueAccessToken(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {

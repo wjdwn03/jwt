@@ -29,7 +29,7 @@ public class UserController {
      * @param loginUserReq        사용자가 입력한 email과 password
      * @param httpServletRequest
      * @param httpServletResponse
-     * @return 성공 시 로그인 처리 후 발급한 JWT를 {@code ResponseEntity}로 반환합니다.
+     * @return 성공 시 로그인 처리 후 발급한 JWT를 {@code ResponseEntity}로 반환합니다
      */
     @PostMapping("/guests/login/normal")
     public ResponseEntity<ResponseDTO> loginUser(@RequestBody LoginUserReq loginUserReq, HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
@@ -45,7 +45,7 @@ public class UserController {
      *
      * @param httpServletRequest
      * @param httpServletResponse
-     * @return 성공 시 재발급한 access token을 {@code ResponseEntity}로 반환합니다.
+     * @return 성공 시 재발급한 access token을 {@code ResponseEntity}로 반환합니다
      */
     @GetMapping("/users/access-token")
     public ResponseEntity<ResponseDTO> reissueAccessToken(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) {
