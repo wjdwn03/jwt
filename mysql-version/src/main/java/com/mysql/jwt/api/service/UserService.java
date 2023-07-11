@@ -173,7 +173,7 @@ public class UserService {
             // 유효기간이 이미 지났거나 DB에 refresh token이 저장되어 있지 않으면 유효하지 않은 refresh token으로 판단
             if (expirationTime < currentTime || user.getRefreshToken() == null) {
 
-                log.info("유효하지 않은 refresh token 입니다.");
+                log.error("유효하지 않은 refresh token 입니다.");
                 deleteCookieRefreshToken(httpServletRequest, httpServletResponse);
 
                 throw new UnAuthorizedException("유효하지 않은 refresh token 입니다.");
