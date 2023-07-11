@@ -48,23 +48,26 @@ public class User {
 
     // Default Value 설정
     @PrePersist
-    public void prePersist(){
+    public void prePersist() {
         this.createdDate = LocalDateTime.now(ZoneId.of("Asia/Seoul"));
         this.status = 'A';
     }
 
     // 일반 회원 회원가입
     @Builder
-    public User(String type, String email){
+    public User(String type, String email) {
         this.type = type;
         this.email = email;
     }
 
     // refresh token 저장
-    public void saveRefreshToken(String refreshToken){
+    public void saveRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
     }
 
-
+    // refresh token DB에서 삭제
+    public void deleteRefreshToken() {
+        this.refreshToken = null;
+    }
 
 }

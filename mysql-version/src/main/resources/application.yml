@@ -30,3 +30,11 @@ logging:
     root: info
     com:
       mysql: debug
+
+  # auth 토큰 유효기간
+app:
+  auth:
+    #    token-expiry: 86400000 # 24시간
+    token-expiry: 10000 # 10초
+    #    refresh-token-expiry: 1209600000 # 7일
+    refresh-token-expiry: 30000 # 30초
