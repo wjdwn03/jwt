@@ -65,6 +65,9 @@ public class User {
         this.refreshToken = refreshToken;
     }
 
-
+    // refresh token DB에서 삭제
+    public void deleteRefreshToken(String refreshToken){
+        this.refreshToken = null;
+    }
 
 }
