@@ -17,9 +17,43 @@ public class ControllerExceptionHandler {
     @ExceptionHandler(NotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ResponseBody
-    public ResponseDTO handleNotFoundException(NotFoundException e){
+    public ResponseDTO handleNotFoundException(NotFoundException e) {
         log.error(e.getMessage());
 
         return ResponseDTO.builder().status(FAIL).message(e.getMessage()).build();
+    }
+
+    @ExceptionHandler(JwtExpiredException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ResponseBody
+    public ResponseDTO handleJwtExpiredException(JwtExpiredException e) {
+        log.error(e.getMessage());
+
+        return ResponseDTO.builder()
+                .status(FAIL)
+                .message(e.getMessage())
+                .build();
+    }
+
+    @ExceptionHandler(TokenValidFailedException.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseBody
+    public ResponseDTO handleTokenValidFailedException(TokenValidFailedException e) {
+        log.error(e.getMessage());
+        return ResponseDTO.builder()
+                .status(FAIL)
+                .message(e.getMessage())
+                .build();
+    }
+
+    @ExceptionHandler(UnAuthorizedException.class)
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ResponseBody
+    public ResponseDTO handleUnAuthorizedException(UnAuthorizedException e) {
+        log.error(e.getMessage());
+        return ResponseDTO.builder()
+                .status(FAIL)
+                .message(e.getMessage())
+                .build();
     }
 }
