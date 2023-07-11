@@ -9,42 +9,56 @@
 
 ```
 jwt
-│  JwtApplication.java
-│
-├─api
-│  ├─controller
-│  │      UserController.java
-│  ├─data
-│  ├─request
-│  ├─response
-│  └─service
-│          UserService.java
-│
-├─config
-│      CorsConfig.java
-│      JwtConfig.java
-│      SecurityConfig.java
-│
-├─db
-│  ├─domain
-│  │      User.java
-│  │
-│  └─repository
-│          UserRepository.java
-│
-├─exception
-├─oauth
-│      AppProperties.java
-│      PrincipalDetails.java
-│      RoleType.java
-│
-├─token
-│      AuthToken.java
-│      AuthTokenProvider.java
-│      TokenAccessDeniedHandler.java
-│      TokenAuthenticationFilter.java
-│
-└─util
-        CookieUtil.java
-        HeaderUtil.java
+│  build.gradle
+└─src
+    ├─main
+      ├─java
+      │  └─com
+      │      └─mysql
+      │          └─jwt
+      │              │  JwtApplication.java
+      │              │
+      │              ├─api
+      │              │  ├─controller
+      │              │  │      UserController.java
+      │              │  │
+      │              │  ├─data
+      │              │  ├─request
+      │              │  ├─response
+      │              │  └─service
+      │              │          UserService.java
+      │              │
+      │              ├─config
+      │              │      CorsConfig.java
+      │              │      JwtConfig.java
+      │              │      SecurityConfig.java
+      │              │
+      │              ├─db
+      │              │  ├─domain
+      │              │  │      User.java
+      │              │  │
+      │              │  └─repository
+      │              │          UserRepository.java
+      │              │
+      │              ├─exception
+      │              ├─oauth
+      │              │      AppProperties.java
+      │              │      PrincipalDetails.java
+      │              │      RoleType.java
+      │              │
+      │              ├─token
+      │              │      AuthToken.java
+      │              │      AuthTokenProvider.java
+      │              │      TokenAccessDeniedHandler.java
+      │              │      TokenAuthenticationFilter.java
+      │              │
+      │              └─util
+      │                      CookieUtil.java
+      │                      HeaderUtil.java
+      │
+      └─resources
+              application-secret.yml
+              application.yml
+              data.sql
+
 ```
