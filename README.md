@@ -25,7 +25,9 @@
   email : qwer@qwer.com,
   password : qwer
   ```
-  **2. JWT 재발급 api 테스트**
+
+**2. JWT 재발급 api 테스트**
+
 - 발급된 access token을 헤더에 담아서 테스트해 볼 수 있다.
   - 쿠키에 refresh token이 담겨 있는지 확인해야 한다.
   - 쿠키에 refresh token이 담겨 있지 않으면 <U>"DB에 저장된 refresh token과 다르다"</U>라는 에러 문구가 return 될 것이다.
