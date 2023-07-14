@@ -6,11 +6,11 @@
 
 &nbsp;✅ mysql-version 코드 업로드 (~2023.07.12)
 
-&nbsp;⬜ mysql-version 코드 설명 README, [JWT 정리한 기술 블로그](https://jjhwang.tistory.com/category/%EB%B3%B4%EC%95%88%2C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8/JWT)에 업로드 예정 (~2023.07.14)
+&nbsp;⬜ mysql-version 코드 설명 README, [JWT 정리한 기술 블로그](https://jjhwang.tistory.com/category/%EB%B3%B4%EC%95%88%2C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8/JWT)에 업로드 예정 (~2023.07.18 - 개인적인 사정으로 일정 변경하겠습니다.) 
 
-&nbsp;⬜ redis-version 코드 업로드 예정 (~2023.07.16)
+&nbsp;⬜ redis-version 코드 업로드 예정 (~2023.07.19)
 
-&nbsp;⬜ redis-version 코드 설명 README, [JWT 정리한 기술 블로그](https://jjhwang.tistory.com/category/%EB%B3%B4%EC%95%88%2C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8/JWT)에 업로드 예정 (~2023.07.18)
+&nbsp;⬜ redis-version 코드 설명 README, [JWT 정리한 기술 블로그](https://jjhwang.tistory.com/category/%EB%B3%B4%EC%95%88%2C%20%EB%A1%9C%EA%B7%B8%EC%9D%B8/JWT)에 업로드 예정 (~2023.07.20)
 
 ## 📢 프로젝트 실행 전 준비 사항
 
