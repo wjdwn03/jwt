@@ -16,7 +16,6 @@ import com.mysql.jwt.util.HeaderUtil;
 import io.jsonwebtoken.Claims;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,8 +40,6 @@ public class UserService {
     private final AppProperties appProperties;
     private final AuthTokenProvider authTokenProvider;
 
-    @Value("${app.auth.refresh-token-expiry}")
-    private long refreshTokenExpiry;
 
     /**
      * 일반 회원이 입력한 이메일과 패스워드를 확인하고 로그인 처리해줍니다.
@@ -67,7 +64,7 @@ public class UserService {
         // 발급한 refresh token을 DB에 저장
         saveRefreshToken(user, refreshToken.getToken());
 
-        int cookieMaxAge = (int) refreshTokenExpiry / 60;
+        int cookieMaxAge = (int) appProperties.getAuth().getRefreshTokenExpiry() / 60;
 
         // refresh toekn 쿠키에 담기
         CookieUtil.deleteCookie(httpServletRequest, httpServletResponse, REFRESH_TOKEN);
@@ -112,7 +109,7 @@ public class UserService {
 
         Date now = new Date();
 
-        return authTokenProvider.createAuthToken(new Date(now.getTime() + refreshTokenExpiry));
+        return authTokenProvider.createAuthToken(new Date(now.getTime() + appProperties.getAuth().getRefreshTokenExpiry()));
     }
 
     /**
