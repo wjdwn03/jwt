@@ -77,7 +77,6 @@ jwt
       │              ├─oauth
       │              │      AppProperties.java
       │              │      PrincipalDetails.java
-      │              │      RoleType.java
       │              │
       │              ├─token
       │              │      AuthToken.java
