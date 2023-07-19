@@ -8,7 +8,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Getter
-//@Component
 @Configuration
 @ConfigurationProperties(prefix = "app")
 public class AppProperties {
