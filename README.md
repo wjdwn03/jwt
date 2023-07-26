@@ -40,3 +40,7 @@
 
 ### mysql-version
 <img width="550" alt="image" src="https://github.com/wjdwn03/jwt/assets/109848753/c7aa1118-44c7-48c3-92cd-b963604fae45">
+
+## 🔍 코드 설명
+#### | config 패키지
+- [CorsConfig 설명](https://jjhwang.tistory.com/35)
