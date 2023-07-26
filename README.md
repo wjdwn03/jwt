@@ -15,6 +15,7 @@
 ## 📢 프로젝트 실행 전 준비 사항
 
 - `mysql-version > src > main > resources > data.sql` 파일을 MySQL Workbench에서 실행.
+- [기타 기본 세팅](https://jjhwang.tistory.com/31)
 
 ## ✔️ 실행 방법
 
